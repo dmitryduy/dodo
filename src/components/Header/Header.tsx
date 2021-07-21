@@ -1,17 +1,9 @@
 import React from "react";
 
-import styled from "styled-components";
-
 import FlexContainer from "../containers/FlexContainer";
 import DeliveryInfo from "../DeliveryInfo/DeliveryInfo";
-import {ICity} from "../../types/delivery";
 import Container from "../containers/Container";
-
-const Logo = styled.svg`
-    width: 250px;
-  height: 50px;
-  margin-right: 70px;
-`;
+import {Logo} from "./Header.styles";
 
 const Header: React.FC = () => {
     return (

@@ -7,7 +7,9 @@ const initialState: DeliveryState = {
         city: "Санкт-Петербург",
         rating: 5,
         deliveryTime: 43
-    }
+    },
+    countCountries: 15,
+    countPizzeria: 452
 }
 
 const deliveryReducer = (state = initialState, action: any): DeliveryState => {

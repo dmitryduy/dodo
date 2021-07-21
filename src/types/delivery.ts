@@ -7,4 +7,6 @@ export interface ICity {
 export interface DeliveryState {
     cities: Array<ICity>;
     currentCity: ICity;
+    countCountries: number;
+    countPizzeria: number;
 }
