@@ -14,11 +14,7 @@ const Column: FC<ColumnProps> = ({cities}) => {
     return (
         <ColumnContainer>
             {cities.map((city, index) => {
-                if (!letter) {
-                    letter = city.city[0];
-                    console.log( letter === "A", letter)
-                    if (letter === 'A') console.log(letter)
-                }
+                if (!letter) letter = city.city[0];
                 if (city.city[0] !== letter) {
                     letter = city.city[0];
                     return (

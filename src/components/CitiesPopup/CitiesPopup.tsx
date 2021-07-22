@@ -29,7 +29,6 @@ const CitiesPopup: FC<CitiesPopupProps> = ({setModal, isModalOpen}) => {
     const contentRef = useRef<HTMLDivElement | null>(null);
 
     const closePopup = (e: React.MouseEvent<HTMLDivElement>): void => {
-        console.log((e.nativeEvent as MouseEvent).composedPath())
         if ((e.nativeEvent as MouseEvent).composedPath().includes(closeButtonRef.current as EventTarget)
             || ((e.nativeEvent as MouseEvent).composedPath().includes(popupRef.current as EventTarget)) && !(e.nativeEvent as MouseEvent).composedPath().includes(contentRef.current as EventTarget)) {
             setModal(false);
@@ -54,7 +53,7 @@ const CitiesPopup: FC<CitiesPopupProps> = ({setModal, isModalOpen}) => {
                     <City>Москва</City>
                     <City>Санкт-Петербург</City>
                 </MainCities>
-                <FlexContainer width='100%' height='65%' justify='space-between' overflowY>
+                <FlexContainer width='100%' height='65%' justify='space-between' overflowX>
                     <Column cities={sortedArray.slice(0, citiesPurColumn)}/>
                     <Column cities={sortedArray.slice(citiesPurColumn, 2 * citiesPurColumn)}/>
                     <Column cities={sortedArray.slice(2 * citiesPurColumn)}/>

@@ -10,3 +10,14 @@ export interface DeliveryState {
     countCountries: number;
     countPizzeria: number;
 }
+
+export enum DeliveryActionTypes {
+    SET_CURRENT_CITY='delivery/SET_CURRENT_CITY',
+}
+
+export interface ISetCurrentCity {
+    type: DeliveryActionTypes.SET_CURRENT_CITY;
+    payload: string;
+}
+
+export type DeliveryAction = ISetCurrentCity;

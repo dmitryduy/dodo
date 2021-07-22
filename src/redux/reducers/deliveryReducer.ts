@@ -1,4 +1,4 @@
-import {DeliveryState} from "../../types/delivery";
+import {DeliveryAction, DeliveryActionTypes, DeliveryState} from "../../types/delivery";
 import cities from "../../cities";
 
 const initialState: DeliveryState = {
@@ -12,8 +12,17 @@ const initialState: DeliveryState = {
     countPizzeria: 452
 }
 
-const deliveryReducer = (state = initialState, action: any): DeliveryState => {
-    return state;
+const deliveryReducer = (state = initialState, action: DeliveryAction): DeliveryState => {
+    switch (action.type) {
+        case DeliveryActionTypes.SET_CURRENT_CITY:
+            return {
+                ...state,
+                currentCity: state.cities.find(city => city.city === action.payload)!
+            };
+        default:
+            return state;
+    }
+
 }
 
 export default deliveryReducer;

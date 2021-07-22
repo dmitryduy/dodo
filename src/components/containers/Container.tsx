@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const ContainerDiv = styled.div`
   padding: 0 30px;
-  max-width: 1920px;
+  max-width: 1500px;
   margin: 0 auto;
 `;
 
