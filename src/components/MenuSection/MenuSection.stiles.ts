@@ -11,4 +11,7 @@ export const MenuSectionContainer = styled.div`
 display: flex;
   flex-wrap: wrap;
   margin: 0 -20px;
-`;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+`

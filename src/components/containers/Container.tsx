@@ -6,6 +6,9 @@ const ContainerDiv = styled.div`
   padding: 0 30px;
   max-width: 1500px;
   margin: 0 auto;
+  @media (max-width: 600px) {
+   padding: 0 10px;
+  }
 `;
 
 const Container: FC = ({children}) => {

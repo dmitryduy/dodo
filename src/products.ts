@@ -1,10 +1,18 @@
 import {IProductCard} from "./types/product";
 
+export interface IAdditive {
+    name: string;
+    disabled: boolean;
+    imageUrl: string;
+    price: number;
+}
 
-interface IPizzaCard {
+export interface IPizzaCard {
     cardInfo: IProductCard;
     sizes: ['small' | null, 'medium' | null, 'big' | null];
     doughs: ['traditional' | null, 'thin' | null];
+    filling: Array<string>;
+    additives: Array<IAdditive>
 }
 
 export interface IProducts {
@@ -23,7 +31,40 @@ export const products: IProducts = {
             title: "Пицца от Тучки с игрушкой из коллекции"
         },
         doughs: ["traditional", "thin"],
-        sizes: ["small", "medium", null]
+        sizes: ["small", "medium", null],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Цыпленок, картошечка, томаты, моцарелла, томатный соус",
@@ -34,7 +75,40 @@ export const products: IProducts = {
             title: "Пицца от Кеши с игрушкой из коллекции"
         },
         doughs: ["traditional", null],
-        sizes: [null, null, "big"]
+        sizes: [null, null, "big"],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Томаты, сладкий перец, красный лук, соус песто, митболы из говядины, моцарелла, томатный соус",
@@ -45,7 +119,40 @@ export const products: IProducts = {
             title: "Фристайло"
         },
         doughs: ["traditional", null],
-        sizes: ["small", null, "big"]
+        sizes: ["small", null, "big"],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Острая чоризо, соус барбекю, томаты, красный лук, моцарелла, томатный соус",
@@ -56,7 +163,40 @@ export const products: IProducts = {
             title: "Колбаски Барбекю"
         },
         doughs: ["traditional", "thin"],
-        sizes: ["small", "medium", "big"]
+        sizes: ["small", "medium", "big"],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Пикантная пепперони, митболы из говядины, соус песто, томаты, красный лук, моцарелла, томатный соус, итальянские травы",
@@ -67,7 +207,40 @@ export const products: IProducts = {
             title: "Зенит"
         },
         doughs: ["traditional", "thin"],
-        sizes: ["small", "medium", null]
+        sizes: ["small", "medium", null],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Пикантная пепперони, увеличенная порция моцареллы, томаты, томатный соус",
@@ -78,7 +251,40 @@ export const products: IProducts = {
             title: "Пепперони фреш"
         },
         doughs: [null, null],
-        sizes: [null, null, null]
+        sizes: [null, null, null],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Моцарелла, сыры чеддер и пармезан, соус альфредо",
@@ -86,10 +292,44 @@ export const products: IProducts = {
             id: 7,
             imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Products/ebf8b8670d6b4f078d9afa616d01202a_366x366.jpeg",
             lowestPrice: 245,
-            title: "Сырная"
+            title: "Сырная",
         },
         doughs: ["traditional", null],
-        sizes: ["small", "medium", "big"]
+        sizes: ["small", "medium", "big"],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
+
     }, {
         cardInfo: {
             description: "Ветчина, моцарелла, соус альфредо",
@@ -100,7 +340,40 @@ export const products: IProducts = {
             title: "Ветчина и сыр"
         },
         doughs: [null, "thin"],
-        sizes: ["small", "medium", null]
+        sizes: ["small", "medium", null],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Цыпленок, моцарелла, соус альфредо",
@@ -111,7 +384,40 @@ export const products: IProducts = {
             title: "Двойной цыпленок"
         },
         doughs: [null, "thin"],
-        sizes: ["small", null, null]
+        sizes: ["small", null, null],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Пикантная пепперони, увеличенная порция моцареллы, томатный соус",
@@ -122,7 +428,40 @@ export const products: IProducts = {
             title: "Пепперони"
         },
         doughs: [null, "thin"],
-        sizes: ["small", "medium", null]
+        sizes: ["small", "medium", null],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Ветчина, шампиньоны, увеличенная порция моцареллы, томатный соус",
@@ -133,7 +472,40 @@ export const products: IProducts = {
             title: "Ветчина и грибы"
         },
         doughs: ["traditional", null],
-        sizes: [null, null, "big"]
+        sizes: [null, null, "big"],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
     }, {
         cardInfo: {
             description: "Увеличенная порция моцареллы, томаты, итальянские травы, томатный соус",
@@ -144,8 +516,41 @@ export const products: IProducts = {
             title: "Маргарита"
         },
         doughs: [null, "thin"],
-        sizes: [null, "medium", "big"]
-    }, {
+        sizes: [null, "medium", "big"],
+        filling: ["томаты", "сладкий перец", "красный лук", "соус песто", "моцарелла", "митболы из говядины"],
+        additives: [
+            {
+                name: "Сырный бортик",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
+                disabled: true,
+                price: 169
+            },
+            {
+                name: "Маслины",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый халапеньо",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Моцарелла",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
+                disabled: false,
+                price: 59
+            },
+            {
+                name: "Острый цыпленок",
+                imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
+                disabled: true,
+                price: 59
+            },
+        ]
+    },/* {
         cardInfo: {
             description: "Мясной соус болоньезе, соус бургер, соленые огурчики, томаты, красный лук, моцарелла",
             disabled: false,
@@ -354,5 +759,5 @@ export const products: IProducts = {
         },
         doughs: ["traditional", null],
         sizes: [null, "medium", null]
-    }]
+    }*/]
 }

@@ -14,7 +14,8 @@ export const ItemContainer = styled.div`
   }
 
   @media (max-width: 600px) {
-    flex-basis: calc(100% - 40px);
+    flex-basis: 100%;
+    margin: 0;
   }
  
 `;

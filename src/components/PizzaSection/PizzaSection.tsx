@@ -1,9 +1,9 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import Item from '../MenuSection/Item/Item';
 import MenuSection from "../MenuSection/MenuSection";
-import {useTypedSelector} from "../../hooks/useTypedSelector";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 
-const PizzaSection:FC = () => {
+const PizzaSection: FC = () => {
     const {pizzas} = useTypedSelector(state => state.products);
     return (
         <MenuSection title='Пицца'>
