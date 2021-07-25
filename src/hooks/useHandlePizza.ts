@@ -8,6 +8,8 @@ export interface IProductContext {
     pizzaSize: 'small' | 'medium' | 'big' | null;
     doughType: 'traditional' | 'thin' | null;
     pizzaCard: IPizzaCard;
+    totalPrice: number,
+    setTotalPrice: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export const ProductContext = createContext<IProductContext | null>(null);
@@ -16,7 +18,7 @@ const useHandlePizza = (id: number): IProductContext => {
     const [pizzaSize, setPizzaSize] = useState<'small' | 'medium' | 'big' | null>(null);
     const [doughType, setDoughType] = useState<'traditional' | 'thin' | null>(null);
     const pizzaCard = useTypedSelector(state => state.products.pizzas.find(pizza => pizza.cardInfo.id === id))!;
-
+    const [totalPrice, setTotalPrice] = useState<number>(pizzaCard.cardInfo.lowestPrice);
 
     const handlePizza = (e: React.MouseEvent<HTMLSpanElement>, type: string): void => {
         switch (type) {
@@ -58,7 +60,9 @@ const useHandlePizza = (id: number): IProductContext => {
         handlePizza,
         pizzaSize,
         doughType,
-        pizzaCard
+        pizzaCard,
+        totalPrice,
+        setTotalPrice
     }
 
 }

@@ -27,7 +27,7 @@ const PizzaAdditives: FC = () => {
 
                     return <AdditiveCard key={index} {...additive} currentPrice={price}/>
                 }
-                )};
+                )}
             </PizzaAdditivesContainer>
         </>
     );

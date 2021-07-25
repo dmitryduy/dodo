@@ -18,6 +18,17 @@ export const City = styled.div`
       opacity: 1;
     }
   }
+  @media (max-width: 700px) {
+    font-size: 15px;
+  }
+  @media (max-width: 650px) {
+    a {
+      display: block;
+    }
+  }
+  @media (max-width: 350px) {
+    font-size: 12px;
+  }
 `;
 
 export const Info = styled.div`

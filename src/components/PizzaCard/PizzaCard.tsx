@@ -8,7 +8,6 @@ import { ProductContext } from '../../hooks/useHandlePizza';
 const PizzaCard: FC = () => {
 
     const {pizzaSize, handlePizza, doughType, pizzaCard} = useContext(ProductContext)!;
-
     return (
         <>
             <Filling>

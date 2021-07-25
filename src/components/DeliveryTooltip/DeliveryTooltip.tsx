@@ -1,19 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 
 
 import FlexContainer from "../containers/FlexContainer";
 import Star from "../Star/Star";
-import {Tooltip, Rating, DeliveryTime} from "./DeliveryTooltip.styles";
+import { Tooltip, Rating, DeliveryTime } from "./DeliveryTooltip.styles";
 
 interface DeliveryTooltipProps {
     rating: number;
     deliveryTime: number;
+    visible: boolean;
 }
 
 
-const DeliveryTooltip = React.forwardRef<HTMLDivElement, DeliveryTooltipProps>(({deliveryTime, rating}, ref) => {
+const DeliveryTooltip: FC<DeliveryTooltipProps> = ({deliveryTime, rating, visible}) => {
     return (
-        <Tooltip ref={ref}>
+        <Tooltip className={visible ? 'visible' : ''}>
             <FlexContainer justify='space-between'>
                 <DeliveryTime>
                     <span className='time'>{deliveryTime} минут</span>
@@ -32,6 +33,6 @@ const DeliveryTooltip = React.forwardRef<HTMLDivElement, DeliveryTooltipProps>((
             <span className='info'>Данный за последние 7 дней в вашем городе</span>
         </Tooltip>
     )
-})
+}
 
 export default DeliveryTooltip;

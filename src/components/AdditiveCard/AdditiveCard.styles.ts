@@ -26,6 +26,18 @@ export const AdditiveCardContainer = styled.div<{ selected: boolean, selectedImg
     opacity: .4;
     border: 1px solid rgb(226, 226, 233);
   `}
+  @media (max-width: 900px) {
+  flex-basis: calc(20% - 8px);
+}
+  @media (max-width: 725px) {
+    flex-basis: calc(25% - 8px);
+  }
+  @media (max-width: 600px) {
+    flex-basis: calc(33.333% - 8px);
+  }
+  @media (max-width: 460px) {
+    flex-basis: calc(50% - 8px);
+  }
 `;
 
 export const Image = styled.img`
@@ -40,6 +52,8 @@ export const Name = styled.h5`
 
 
 export const Price = styled.p`
+  position: absolute;
+  bottom: 5px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;

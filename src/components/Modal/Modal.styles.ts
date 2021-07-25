@@ -20,6 +20,10 @@ export const ProductContainer = styled.div`
     opacity: 1;
     visibility: visible;
   }
+  overflow-y: auto;
+  @media (max-width: 900px) {
+    //background-color: transparent;
+  }
 `;
 
 export const ProductContent = styled.div<{direction: 'column' | 'row', padding: string}>`
@@ -37,11 +41,27 @@ export const ProductContent = styled.div<{direction: 'column' | 'row', padding: 
     opacity: 0;
     visibility: hidden;
     transform: scale(.9);
+    @media (max-width: 900px) {
+     
+      transform: translateY(1000px);
+      opacity: 1;
+    }
   }
   &.visible {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
+    @media (max-width: 900px) {
+      max-height: 100vh;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    flex-direction: column;
   }
 `;
 
@@ -51,4 +71,12 @@ export const CloseButton = styled.svg`
   transform: translateX(calc(100% + 10px));
   top: 10px;
   cursor: pointer;
+  @media (max-width: 900px) {
+    transform: translateX(-10px);
+    path {
+      fill: #000;
+      opacity: .5;
+    }
+  }
+  
 `;

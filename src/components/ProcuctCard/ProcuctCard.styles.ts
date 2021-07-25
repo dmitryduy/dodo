@@ -8,13 +8,31 @@ export const Image = styled.div<{ size: 'small' | 'medium' | 'big' | null }>`
   justify-content: center;
   align-items: center;
   padding: 100px 50px;
+  background-color: #fff;
   flex-basis: 60%;
-
   img {
     transition: .2s;
     transform: scale(${props => props.size === 'small' || null ? '1' : props.size === 'medium' ? '1.2' : '1.4'});
     max-width: 450px;
     max-height: 450px;
+  }
+@media (max-width: 900px) {
+  flex-basis: 50%;
+}
+  @media (max-width: 600px) {
+    img {
+      width: 300px;
+    }
+  }
+  @media (max-width: 420px) {
+    img {
+      width: 250px;
+    }
+  }
+  @media (max-width: 350px) {
+    img {
+      width: 200px;
+    }
   }
 `;
 
@@ -25,11 +43,13 @@ export const LeftSidebarContainer = styled.div`
   display: flex;
   flex-basis: 40%;
   flex-direction: column;
+  @media (max-width: 900px) {
+    flex-basis: 50%;
+    padding-top: 0;
+  }
 `;
 
 export const ProductInfo = styled.div`
-  flex: 1 0 auto;
-  height: 90%;
   overflow-y: auto;
   overflow-x: hidden;
   margin-bottom: 20px;
@@ -45,6 +65,12 @@ export const ProductInfo = styled.div`
     min-height: 50px;
     background-color: rgba(57, 57, 57, 0.3);
     border-radius: 4px;
+  }
+  @media (max-width: 900px) {
+    height: 75vh;
+  }
+  @media (max-width: 700px) {
+    height: 85vh;
   }
 `;
 
@@ -71,5 +97,15 @@ export const AddToCartButton = styled.button`
 
   &:hover {
     background-color: rgba(255, 105, 0, 1);
+  }
+  @media (max-width: 900px) { 
+    width: 50%;
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) {
+    width: 70%;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
   }
 `;

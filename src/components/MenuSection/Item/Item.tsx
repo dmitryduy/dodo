@@ -17,9 +17,7 @@ const Item: FC<ItemProps> = ({product}) => {
 
     return (
         <ItemContainer>
-            {<ProductCard productCardOpen={productCardOpen}
-                         id={product.id}
-                         setProductCardOpen={setProductCardOpen}/>}
+            <ProductCard productCardOpen={productCardOpen} id={product.id} setProductCardOpen={setProductCardOpen}/>
             <Content>
                 <Image onClick={handleProductCard} title={product.title} src={product.imageUrl} alt={product.title}/>
                 <Title>{product.title}</Title>

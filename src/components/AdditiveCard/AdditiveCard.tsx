@@ -11,9 +11,11 @@ const AdditiveCard: FC<IAdditive & {currentPrice: number}> = ({currentPrice, dis
     }
     return (
         <AdditiveCardContainer disabled={disabled} selected={toggleSelected} selectedImg={selectedImage} onClick={handleSelectCard}>
-            <Image
-                src={imageUrl} alt={name}/>
-            <Name>{name}</Name>
+            <div style={{flex: '1 0 auto'}}>
+                <Image
+                    src={imageUrl} alt={name}/>
+                <Name>{name}</Name>
+            </div>
             <Price>{currentPrice}Р</Price>
         </AdditiveCardContainer>
     );

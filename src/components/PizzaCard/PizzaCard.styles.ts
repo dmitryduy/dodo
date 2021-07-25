@@ -42,7 +42,7 @@ export const PizzaSizes = styled(TabContainer)`
   margin-bottom: 10px;
   &:before {
     width: 33%;
-    left: ${props => props.size === 'small' || null ? '2px' : props.size === 'medium' ? '33.333%' : '66.666%'};
+    left: ${props => props.size === 'small' ||  props.size === null ? '2px' : props.size === 'medium' ? '33.333%' : '66.666%'};
   }
 
   button {
@@ -50,12 +50,12 @@ export const PizzaSizes = styled(TabContainer)`
   }
 `;
 
-// @ts-ignore
+
 export const PizzaDough = styled(TabContainer)`
   margin-bottom: 20px;
   &:before {
     width: 50%;
-    left: ${props => props.doughType === 'traditional' ? '2px' : '50%'};
+    left: ${props => props.doughType === 'traditional' || props.doughType === null ? '2px' : '50%'};
   }
 
   button {
