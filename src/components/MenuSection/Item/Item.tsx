@@ -11,13 +11,15 @@ interface ItemProps {
 const Item: FC<ItemProps> = ({product}) => {
     const [productCardOpen, setProductCardOpen] = useState<boolean>(false);
 
-    const handleProductCard = (e: React.MouseEvent<HTMLButtonElement| HTMLImageElement>): void =>{
+    const handleProductCard = (e: React.MouseEvent<HTMLButtonElement | HTMLImageElement>): void => {
         setProductCardOpen(true);
     }
 
     return (
         <ItemContainer>
-            {productCardOpen && <ProductCard id={product.id}/>}
+            {<ProductCard productCardOpen={productCardOpen}
+                         id={product.id}
+                         setProductCardOpen={setProductCardOpen}/>}
             <Content>
                 <Image onClick={handleProductCard} title={product.title} src={product.imageUrl} alt={product.title}/>
                 <Title>{product.title}</Title>

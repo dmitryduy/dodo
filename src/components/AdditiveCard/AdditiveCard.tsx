@@ -3,7 +3,7 @@ import {Image, Price, Name, AdditiveCardContainer} from "./AdditiveCard.styles";
 import selectedImage from "../../assets/images/selectedAdditives.png";
 import { IAdditive } from "../../products";
 
-const AdditiveCard: FC<IAdditive> = ({disabled, imageUrl, price, name}) => {
+const AdditiveCard: FC<IAdditive & {currentPrice: number}> = ({currentPrice, disabled, imageUrl, price, name}) => {
     const [toggleSelected, setToggleSelected] = useState<boolean>(false);
 
     const handleSelectCard = (e: React.MouseEvent<HTMLDivElement>): void => {
@@ -14,7 +14,7 @@ const AdditiveCard: FC<IAdditive> = ({disabled, imageUrl, price, name}) => {
             <Image
                 src={imageUrl} alt={name}/>
             <Name>{name}</Name>
-            <Price>{price}Р</Price>
+            <Price>{currentPrice}Р</Price>
         </AdditiveCardContainer>
     );
 };

@@ -4,7 +4,7 @@ export interface IAdditive {
     name: string;
     disabled: boolean;
     imageUrl: string;
-    price: number;
+    price: [number, number, number];
 }
 
 export interface IPizzaCard {
@@ -38,31 +38,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -82,31 +82,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -126,31 +126,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -170,31 +170,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -214,31 +214,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -258,31 +258,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -302,31 +302,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
 
@@ -347,31 +347,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -391,31 +391,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -435,31 +435,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -479,31 +479,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     }, {
@@ -523,31 +523,31 @@ export const products: IProducts = {
                 name: "Сырный бортик",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/d18f364cbd6a43a88bfefb38abd43fa2.png",
                 disabled: true,
-                price: 169
+                price: [169, 199, 229]
             },
             {
                 name: "Маслины",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5EA513EF2",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый халапеньо",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA5E376B4DF",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Моцарелла",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/000D3A22FA54A81411EA083CC540F6EE",
                 disabled: false,
-                price: 59
+                price: [59, 79, 99]
             },
             {
                 name: "Острый цыпленок",
                 imageUrl: "https://dodopizza-a.akamaihd.net/static/Img/Ingredients/9a8a9f378d224bf1bb091128b189edf2.png",
                 disabled: true,
-                price: 59
+                price: [59, 79, 99]
             },
         ]
     },/* {

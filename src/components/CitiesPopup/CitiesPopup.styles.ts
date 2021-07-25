@@ -1,46 +1,5 @@
 import styled from "styled-components";
 
-export const Popup = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 10;
-  transition: .2s;
-  &.open {
-   visibility: visible;
-    opacity: 1;
-  }
-  &.close {
-    visibility: hidden;
-    opacity: 0;
-  }
-`;
-
-export const PopupContent = styled.div`
-  position: relative;
-  background-color: #fff;
-  width: 70vw;
-  height: 80vh;
-  margin: auto;
-  border-radius: 30px;
-  padding: 20px;
-`;
-
-export const CloseButton = styled.svg`
-  position: absolute;
-  right: -10px;
-  transform: translateX(100%);
-  top: 10px;
-  cursor: pointer;
-
-`;
-
 export const Title = styled.div`
 display: flex;
   align-items: center;

@@ -1,16 +1,33 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 
 import { PizzaAdditivesContainer, Title } from './PizzaAdditives.style';
 import AdditiveCard from "../AdditiveCard/AdditiveCard";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
+import { ProductContext } from "../../hooks/useHandlePizza";
 
-const PizzaAdditives: FC<{id: number}> = ({id}) => {
-    const {additives} = useTypedSelector(state => state.products.pizzas.find(pizza => pizza.cardInfo.id === id))!;
+
+const PizzaAdditives: FC = () => {
+
+    const {pizzaCard: {additives}, pizzaSize} = useContext(ProductContext)!;
+
     return (
         <>
             <Title>Добавить в пиццу</Title>
             <PizzaAdditivesContainer>
-                {additives.map((additive, index) => <AdditiveCard key={index} {...additive}/>)}
+                {additives.map((additive, index) => {
+                    let price: number = additive.price[0];
+                   if (pizzaSize === 'small') {
+                       price = additive.price[0];
+                   }
+                    if (pizzaSize === 'medium') {
+                        price = additive.price[1];
+                    }
+                    if (pizzaSize === 'big') {
+                        price = additive.price[2];
+                    }
+
+                    return <AdditiveCard key={index} {...additive} currentPrice={price}/>
+                }
+                )};
             </PizzaAdditivesContainer>
         </>
     );
